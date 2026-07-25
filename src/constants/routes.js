@@ -11,4 +11,7 @@ export const ROUTES = {
   ABOUT: "/about",
   CAREERS: "/careers",
   PRESS: "/press",
+  HELP: "/help",
+  CANCELLATION: "/help/cancellation",
+  CONTACT: "/contact",
 };

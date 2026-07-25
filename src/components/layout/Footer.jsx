@@ -18,9 +18,9 @@ const FOOTER_COLUMNS = [
   {
     heading: "Support",
     links: [
-      { label: "Help center", to: "/help" },
-      { label: "Cancellation options", to: "/help/cancellation" },
-      { label: "Contact us", to: "/contact" },
+      { label: "Help center", to: ROUTES.HELP },
+      { label: "Cancellation options", to: ROUTES.CANCELLATION },
+      { label: "Contact us", to: ROUTES.CONTACT },
     ],
   },
 ];
