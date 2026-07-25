@@ -58,24 +58,20 @@ This project was created to strengthen practical frontend development skills and
 | | |
 |---|---|
 | 🌐 **Live Website** | [your-deployment-url.vercel.app](https://your-deployment-url.vercel.app) *(placeholder)* |
-| 💻 **GitHub Repository** | [github.com/Danishh07/travel-booking-website](https://github.com/Danishh07/travel-booking-website) *(placeholder)* |
+| 💻 **GitHub Repository** | [github.com/Danishh07/travel-booking-website](https://github.com/Danishh07/travel-booking-website) | 
 
 ---
 
 ## 📸 Screenshots
 
-<div align="center">
-
 ### Desktop View
-`![Desktop View](./docs/screenshots/desktop-home.png)`
+![Desktop View](./docs/screenshots/desktop-home.png)
 
 ### Tablet View
-`![Tablet View](./docs/screenshots/tablet-home.png)`
+![Tablet View](./docs/screenshots/tablet-home.png)
 
 ### Mobile View
-`![Mobile View](./docs/screenshots/mobile-home.png)`
-
-</div>
+![Mobile View](./docs/screenshots/mobile-home.png)
 
 <details>
 <summary><strong>More screenshots (Booking, Flights, Hotels, Dashboard)</strong></summary>
