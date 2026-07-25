@@ -1,12 +1,16 @@
 <div align="center">
 
+<div align="center">
+
 # ✈️ TravelNest
 
-### Flights, hotels, and itineraries — searched, compared, and booked in one clear boarding pass.
+### A modern frontend travel booking platform built with React.
 
-A frontend-only travel booking platform built to demonstrate production-grade React architecture:
-component design, state management, routing, forms, and accessibility — the way a real
-travel product would be structured, minus the backend.
+TravelNest is a **frontend-only** travel booking application designed to showcase modern React development practices, including reusable component architecture, state management, routing, form handling, responsive design, and accessibility.
+
+Built as a portfolio project inspired by real-world travel platforms such as Airbnb, Booking.com, and Google Flights.
+
+<br>
 
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
@@ -17,29 +21,37 @@ travel product would be structured, minus the backend.
 [![Responsive](https://img.shields.io/badge/Responsive-Yes-2F6F62?style=for-the-badge)](#-features)
 [![Open Source](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-C08B3E?style=for-the-badge)](#-contributing)
 
+**🚀 Live Demo** • **📖 Documentation** • **✨ Features** • **📸 Screenshots** • **⚙️ Installation** • **🏗️ Architecture**
+
 [Live Demo](#-live-demo) · [Features](#-features) · [Screenshots](#-screenshots) · [Getting Started](#-getting-started) · [Architecture](#-project-architecture)
 
 </div>
 
-<br />
+<br>
 
 ## 📖 Overview
 
-**TravelNest** is a frontend-only travel booking platform — flights, hotels, destination guides,
-a full booking flow, a wishlist, and a personal dashboard — built entirely in React, with no
-backend, authentication server, or payment gateway. All data comes from local mock modules
-designed to look and behave like real API responses.
+**TravelNest** is a modern frontend travel booking platform built with **React**, designed to simulate the experience of searching, exploring, and booking trips through a clean and responsive user interface.
 
-It's inspired by the UX patterns of products like Airbnb, Booking.com, and Google Flights, but
-built from scratch with its own design system (a "boarding pass" visual motif — dashed
-flight-path dividers, ticket-stub cards — running through the search bar, flight results,
-and booking summary) rather than a copied template.
+The application includes flight and hotel listings, destination pages, a complete booking workflow, wishlist management, and a personalized dashboard. It is built entirely on the frontend using local mock data, allowing the focus to remain on React architecture, component design, state management, routing, form handling, and responsive UI development.
 
-The project exists to answer one question honestly: **can this codebase hold up to the
-scrutiny of a senior frontend engineer reviewing it in an interview?** Every page is composed
-from small, reusable pieces; state is split deliberately between local, form, and global
-(Redux) layers; and the design system, routing, and accessibility choices are all documented
-inline in the code, not just in this README.
+Inspired by platforms such as **Airbnb**, **Booking.com**, and **Google Flights**, TravelNest follows modern UI/UX principles while maintaining its own visual identity. Instead of replicating an existing product, the project introduces a travel-themed design language featuring boarding-pass inspired cards, structured layouts, and a consistent design system.
+
+This project was created to strengthen practical frontend development skills and demonstrate the ability to build a scalable React application using reusable components, organized project structure, and modern development practices.
+
+---
+
+## 🚀 Project Highlights
+
+- ✨ Modern travel booking interface built with React
+- 📱 Fully responsive across desktop, tablet, and mobile
+- ⚛️ Built using reusable React components
+- 🗂️ Organized project architecture for scalability
+- 🔄 Redux Toolkit for global state management
+- 📝 React Hook Form for form validation
+- 🎯 React Router for client-side navigation
+- ❤️ Wishlist with Local Storage persistence
+- ⚡ Fast development experience powered by Vite
 
 ---
 
@@ -48,7 +60,7 @@ inline in the code, not just in this README.
 | | |
 |---|---|
 | 🌐 **Live Website** | [your-deployment-url.vercel.app](https://your-deployment-url.vercel.app) *(placeholder)* |
-| 💻 **GitHub Repository** | [github.com/your-username/travelnest](https://github.com/your-username/travelnest) *(placeholder)* |
+| 💻 **GitHub Repository** | [github.com/Danishh07/travel-booking-website](https://github.com/Danishh07/travel-booking-website) *(placeholder)* |
 
 ---
 
@@ -86,36 +98,48 @@ inline in the code, not just in this README.
 
 ## ✨ Features
 
-- 🔍 **Flight search & booking** — search bar with validation, filter by stops/airline/price, sort by price/duration/departure, boarding-pass-styled result cards
-- 🏨 **Hotel search & booking** — location/date/guest search, filter by rating/amenities/price, sortable results
-- 🗺️ **Destination details** — hero image, photo gallery, curated things-to-do, nearby hotels, traveler reviews
-- 🎟️ **Full booking flow** — dynamic passenger/guest fields that grow and shrink with traveler count (`useFieldArray`), live price recalculation by cabin class/room type, a real confirmation screen with a generated booking reference
-- ❤️ **Wishlist** — save destinations and hotels from anywhere in the app, persisted to `localStorage`, backed by Redux
-- 📊 **Personal dashboard** — upcoming/previous trips (computed live from booking data), account overview stats, saved-destinations preview
-- 🛟 **Support center** — searchable FAQ accordion, a *functional* booking lookup + cancellation tool, and a validated contact form
-- 📱 **Fully responsive** — desktop, tablet, and mobile layouts throughout, verified down to 320px
-- ⚡ **Code-split routing** — every page is lazy-loaded (`React.lazy` + `Suspense`), so the initial bundle only ships what the landing page needs
-- 🎨 **A real design system** — custom color tokens, a display/body/mono type scale, and a recurring "boarding pass" visual motif, not default Tailwind styling
-- ♿ **Accessibility-reviewed** — verified color contrast ratios (WCAG AA), visible focus states on every interactive element (including custom radio cards), semantic landmarks, skip-to-content link, and correct heading hierarchy across all 14 pages
-- 🧩 **Reusable component library** — `Button`, `Card` variants, `Badge`, `Rating`, `EmptyState`, `Pagination`, `Breadcrumb`, `Accordion` — each used in 3+ places, none duplicated
-- ✅ **Form validation** — every form (search, booking, contact, newsletter) built with React Hook Form, including cross-field validation (e.g. check-out must be after check-in)
-- 🗃️ **State management done deliberately** — Redux Toolkit only for state that's genuinely global (bookings, wishlist, UI toggles); everything else stays local or lives in the form
+### ✈️ Travel Experience
 
+- Flight Search & Booking
+- Hotel Search & Booking
+- Destination Explorer
+- Booking Workflow
+
+### 👤 User Experience
+
+- Wishlist
+- Dashboard
+- Help Center
+- Contact Form
+
+### ⚛️ React Features
+
+- Redux Toolkit
+- React Hook Form
+- React Router
+- Lazy Loading
+
+### 🎨 UI & Performance
+
+- Responsive Design
+- Accessible UI
+- Reusable Components
+- Modern Tailwind Design
 ---
 
 ## 🛠️ Tech Stack
 
 | Technology | Purpose |
-|---|---|
-| **React 18** | Component-driven UI, hooks-based architecture |
-| **Vite** | Dev server and production build tooling |
-| **Tailwind CSS** | Utility-first styling, powers the custom design system via `tailwind.config.js` tokens |
-| **React Router DOM** | Client-side routing, nested layouts, lazy-loaded route-level code splitting |
-| **Redux Toolkit** | Global state for bookings and wishlist (with `localStorage` persistence) and minor UI state |
-| **React Hook Form** | All form state, validation, and dynamic field arrays |
-| **React Icons** | Icon system (Heroicons via `react-icons/hi2`) |
-| **Axios** | Installed and ready for a future API layer (see [Future Improvements](#-future-improvements)) — the current build uses local mock data, so no live HTTP calls are made yet |
-| **ESLint** (flat config, React + Hooks rules) | Static analysis — `npm run lint` runs clean across the whole codebase |
+|------------|---------|
+| **React 18** | Building a modern component-based user interface |
+| **Vite** | Fast development server and optimized production builds |
+| **Tailwind CSS** | Utility-first CSS framework for responsive UI development |
+| **React Router DOM** | Client-side routing and navigation |
+| **Redux Toolkit** | Global state management |
+| **React Hook Form** | Form handling and validation |
+| **React Icons** | Consistent icon library |
+| **Axios** | Prepared for future API integration |
+| **ESLint** | Code quality and linting |
 
 ---
 
@@ -172,37 +196,43 @@ travelnest/
 
 ## 🚀 Getting Started
 
+Follow these steps to run the project locally.
+
 ### Prerequisites
 
-- Node.js 18+
+Before getting started, make sure you have the following installed:
+
+- Node.js 18 or later
 - npm
 
 ### Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/travelnest.git
+git clone https://github.com/Danishh07/travel-booking-website.git
 
-# Move into the project
-cd travelnest
+# Navigate to the project folder
+cd travel-booking-website
 
 # Install dependencies
 npm install
 
-# Start the dev server
+# Start the development server
 npm run dev
 ```
 
-The app will be running at `http://localhost:5173`.
+Once the server starts, open **http://localhost:5173** in your browser.
 
-### Available Scripts
+---
+
+### 📜 Available Scripts
 
 | Command | Description |
-|---|---|
-| `npm run dev` | Starts the Vite dev server with hot module replacement |
-| `npm run build` | Type-checks and bundles the app for production into `dist/` |
-| `npm run preview` | Serves the production build locally, for a final check before deploying |
-| `npm run lint` | Runs ESLint across the codebase |
+|----------|-------------|
+| `npm run dev` | Starts the development server |
+| `npm run build` | Creates an optimized production build |
+| `npm run preview` | Previews the production build locally |
+| `npm run lint` | Runs ESLint to check code quality |
 
 ---
 
@@ -210,73 +240,63 @@ The app will be running at `http://localhost:5173`.
 
 <details>
 <summary><strong>Pages (<code>src/pages</code>)</strong></summary>
-<br />
 
-Fourteen route-level pages, each lazy-loaded independently: `Home`, `Flights`, `Hotels`,
-`DestinationDetails`, `Booking`, `Wishlist`, `Dashboard`, `About`, `Careers`, `Press`, `Help`,
-`Cancellation`, `Contact`, and `NotFound`. Every page is a thin composition layer — it pulls
-data from `data/` or Redux, hands it to a custom hook if there's real logic involved, and
-renders section components. No page file contains business logic itself.
+Route-level pages are responsible only for composing the UI. They fetch data from local modules or Redux, delegate complex logic to custom hooks, and render reusable section components.
+
+Current pages include:
+
+`Home`, `Flights`, `Hotels`, `DestinationDetails`, `Booking`, `Wishlist`, `Dashboard`, `About`, `Careers`, `Press`, `Help`, `Cancellation`, `Contact`, and `NotFound`.
+
+Business logic is intentionally kept outside page components to improve readability and maintainability.
 
 </details>
 
 <details>
 <summary><strong>Components (<code>src/components</code>)</strong></summary>
-<br />
 
-Split into three tiers:
-- **`common/`** — truly generic, reused across unrelated pages (`Button`, `Badge`, `Rating`,
-  `Pagination`, `Breadcrumb`, `Accordion`, `EmptyState`, plus domain cards like
-  `DestinationCard`/`HotelCard`/`FlightCard` that appear on 2–4 different pages each).
-- **`layout/`** — the shell every page renders inside (`Navbar`, `Footer`, `Layout`).
-- **`sections/`** — composed, page-specific sections, grouped by feature folder
-  (`home/`, `flights/`, `hotels/`, `destination/`, `booking/`, `dashboard/`, `help/`).
+The component architecture is divided into three layers:
+
+- **`common/`** — Reusable UI components shared across the application.
+- **`layout/`** — Global layout components such as `Navbar`, `Footer`, and `Layout`.
+- **`sections/`** — Feature-specific UI sections grouped by page (Home, Flights, Hotels, Booking, Dashboard, etc.).
+
+This separation keeps components modular, reusable, and easy to maintain.
 
 </details>
 
 <details>
 <summary><strong>Redux (<code>src/redux</code>)</strong></summary>
-<br />
 
-Only two slices hold data that's genuinely global: **`bookingSlice`** (confirmed bookings,
-read by both the Booking confirmation flow and the Dashboard) and **`wishlistSlice`** (saved
-destinations/hotels, read by the wishlist heart icons on every card *and* the Wishlist page).
-Both persist to `localStorage` via a single `store.subscribe()` call — a deliberate choice
-over pulling in `redux-persist` for two small slices. A third, `uiSlice`, holds trivial UI
-state (mobile nav open/closed). Everything else — form drafts, filter/sort state, accordion
-open state — stays local, because no other component needs it.
+Redux Toolkit is used only for application-wide state such as bookings, wishlist, and shared UI preferences.
+
+Feature-specific state like search filters, forms, and temporary UI interactions remain inside local React state or React Hook Form to keep the global store lightweight and maintainable.
 
 </details>
 
 <details>
 <summary><strong>Hooks (<code>src/hooks</code>)</strong></summary>
-<br />
 
-Custom hooks carry the logic that would otherwise bloat page components:
-`useFlightsFilter` / `useHotelsFilter` (filter + sort + pagination, derived with `useMemo`),
-`useFlightSearchForm` (shared React Hook Form setup between the Home hero and the Flights
-search bar), `useWishlist` and `useBookings` (thin wrappers around their Redux slices so no
-component talks to `useSelector`/`dispatch` directly).
+Custom hooks encapsulate reusable business logic such as search filtering, booking management, wishlist handling, and form configuration.
+
+This keeps page components focused on rendering while improving code reuse across the application.
 
 </details>
 
 <details>
 <summary><strong>Services (<code>src/services</code>)</strong></summary>
-<br />
 
-Currently scaffolded but empty — all data comes from the local mock modules in `src/data/`
-instead. This folder is where an Axios-based API client would live if TravelNest were wired
-up to a real backend (see [Future Improvements](#-future-improvements)).
+The `services` directory is reserved for future backend integration.
+
+The current version uses local mock data, making it easy to replace with real REST APIs without changing the UI architecture.
 
 </details>
 
 <details>
 <summary><strong>Utils (<code>src/utils</code>)</strong></summary>
-<br />
 
-Pure, dependency-free helper functions: `formatters.js` (currency/duration formatting),
-`pricing.js` (flight/hotel total calculations — kept separate from components so the math
-is independently testable), `storage.js` (safe `localStorage` read/write wrappers).
+Utility functions are organized separately for formatting, pricing calculations, and local storage helpers.
+
+Keeping utility logic outside components improves readability, reusability, and maintainability.
 
 </details>
 
@@ -284,69 +304,70 @@ is independently testable), `storage.js` (safe `localStorage` read/write wrapper
 
 ## 🗺️ Future Improvements
 
-- [ ] **Backend integration** — replace `src/data/*` with real API calls through `src/services/`
-- [ ] **Authentication** — real sign-up/login instead of the mock profile on the Dashboard
-- [ ] **Payment gateway** — Stripe integration for the booking flow (currently no payment is collected, by design)
-- [ ] **Real booking/inventory API** — live seat maps, room availability, and pricing
-- [ ] **Real-time flight data** — integrate a live flight-status/pricing API
-- [ ] **Maps integration** — Google Maps or Mapbox on Destination Details for things-to-do locations
-- [ ] **Notifications** — email/push confirmation and reminder system
-- [ ] **Admin panel** — manage listings, view bookings, moderate reviews
-- [ ] **Automated testing** — unit tests for `utils/pricing.js` and the filter hooks, component tests for the booking flow
+The following enhancements are planned for future versions of TravelNest:
+
+### 🔧 Backend & APIs
+- [ ] Replace local mock data with a real backend API
+- [ ] Integrate live flight and hotel booking APIs
+- [ ] Add real-time pricing and availability updates
+
+### 🔐 Authentication & Payments
+- [ ] Implement user authentication (Sign Up / Login)
+- [ ] Integrate Stripe for secure online payments
+- [ ] Enable booking history synchronization across devices
+
+### 🌍 User Experience
+- [ ] Add Google Maps or Mapbox integration for destinations
+- [ ] Introduce email and push notifications for bookings
+- [ ] Improve search with advanced filters and recommendations
+
+### 🛠️ Administration & Quality
+- [ ] Build an admin dashboard for managing bookings and listings
+- [ ] Add unit and component testing using Vitest and React Testing Library
+- [ ] Improve application performance and accessibility based on Lighthouse audits
 
 ---
 
 ## 🎓 Learning Outcomes
 
-Building TravelNest was an exercise in the parts of React that are easy to *use* but hard
-to use **well**:
+Building **TravelNest** helped strengthen practical frontend development skills and provided hands-on experience with modern React development practices.
 
-- **React Router** — nested layouts via `<Outlet>`, lazy-loaded routes, dynamic segments (`/destinations/:slug`, `/booking/:type/:id`), and reading/writing the URL query string as shareable state
-- **Redux Toolkit** — deciding what *doesn't* belong in global state as much as what does, `prepare` callbacks for derived fields (booking references, timestamps), and manual `localStorage` persistence without extra dependencies
-- **React Hook Form** — `useFieldArray` for a traveler list that grows/shrinks live, `FormProvider`/`useFormContext` to share one form across sibling components, and cross-field validation
-- **Component reusability** — building `DestinationCard`/`HotelCard`/`FlightCard` once and reusing them across Home, listing pages, Destination Details, and the Wishlist, instead of re-implementing similar markup per page
-- **Responsive design** — a mobile-first grid system verified down to 320px, including fixing a real overlap/clipping bug in the hero's floating search card
-- **Performance optimization** — route-based code splitting with `React.lazy`, `useMemo` for derived filter/sort results so unrelated state changes don't re-sort data
-- **Accessibility as a first-class concern** — computing actual WCAG contrast ratios, fixing an invisible focus state on custom radio cards via `has-[:focus-visible]`, and correcting heading-hierarchy skips — not just running a linter and calling it done
+Throughout this project, I gained experience in:
+
+- **React Router** — Building multi-page applications with nested layouts, dynamic routes, and client-side navigation.
+- **Redux Toolkit** — Managing global application state while keeping feature-specific state local.
+- **React Hook Form** — Creating scalable forms with validation and dynamic fields.
+- **Reusable Component Architecture** — Designing modular components that can be shared across multiple pages.
+- **Responsive Web Design** — Developing mobile-first layouts that work seamlessly across desktop, tablet, and mobile devices.
+- **Performance Optimization** — Improving application performance using lazy loading, code splitting, memoization, and optimized rendering.
+- **Accessibility** — Applying semantic HTML, keyboard navigation, focus management, and accessible form practices.
+- **Project Organization** — Structuring a scalable React application with feature-based folders, custom hooks, and clear separation of concerns.
 
 ---
 
 ## 💡 Why This Project?
 
-Most portfolio travel-booking clones stop at "looks nice in a screenshot." TravelNest is
-built to survive a code review, not just a demo:
+TravelNest was built to go beyond a simple UI clone by focusing on the principles used in real-world frontend development.
 
-- **Every design decision has a stated reason** — component boundaries, what's in Redux vs.
-  local state, why a hook was extracted — documented in commit messages and inline comments,
-  the same way it'd be explained in an interview.
-- **It's been audited, not just built.** A dedicated accessibility and responsive-design pass
-  found and fixed real issues (a failing contrast ratio on the primary CTA color, invalid
-  nested-interactive-element HTML, an invisible focus ring) — the kind of thing that separates
-  "I copied a template" from "I understand what I shipped."
-- **The data layer is honest.** No fake `fetch()` calls pretending to hit a real API — mock
-  data is clearly local, and the `services/` folder is left empty and explained, rather than
-  papered over.
+The primary goal of this project was to strengthen React fundamentals while applying modern development practices such as component reusability, scalable project structure, state management, responsive design, accessibility, and clean code organization.
 
-If you're reviewing this for a frontend role: every file is small enough to read end-to-end,
-every hook has one clear job, and I can walk through *why* any piece of it is built the way
-it is.
+Key objectives of this project include:
+
+- **Building reusable components** that can be shared across multiple pages.
+- **Organizing the project with a scalable architecture** for easier maintenance and future enhancements.
+- **Applying modern React practices** using React Router, Redux Toolkit, and React Hook Form.
+- **Creating a responsive user experience** across desktop, tablet, and mobile devices.
+- **Following accessibility best practices** through semantic HTML, keyboard-friendly interactions, and clear focus states.
+- **Keeping the application ready for future backend integration** by separating UI, business logic, and data layers.
+
+TravelNest represents my approach to building maintainable, user-friendly React applications while continuously improving frontend development skills through practical projects.
 
 ---
 
 ## 📄 License
 
-Distributed under the **MIT License**. See [`LICENSE`](./LICENSE) for details.
-
----
-
-## 📬 Contact
-
-**Your Name**
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/your-profile)
-[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://your-portfolio.com)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:you@example.com)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/your-username)
+This project is licensed under the **MIT License**.
+See [`LICENSE`](./LICENSE) for details.
 
 ---
 
@@ -367,14 +388,20 @@ Please keep commits scoped and messages descriptive (this project follows
 
 ## 🙏 Acknowledgements
 
-TravelNest's UX is inspired by the search-and-booking patterns popularized by
-**[Airbnb](https://www.airbnb.com/)**, **[Booking.com](https://www.booking.com/)**, and
-**[Google Flights](https://www.google.com/travel/flights)**. TravelNest is an independent
-portfolio project and is **not affiliated with, endorsed by, or connected to** any of the
-companies above.
+TravelNest draws inspiration from the user experience and booking workflows of platforms such as **[Airbnb](https://www.airbnb.com/)**, **[Booking.com](https://www.booking.com/)**, and **[Google Flights](https://www.google.com/travel/flights)**.
+
+This is an independent portfolio project created for learning and demonstration purposes. It is **not affiliated with, endorsed by, or associated with** any of the companies or services mentioned above.
+
+---
 
 <div align="center">
 
-**⭐ If this project helped you or you found it interesting, consider giving it a star.**
+### ⭐ Thanks for Visiting!
+
+If you found this project helpful or interesting, consider giving it a ⭐ on GitHub.
+
+Your support is greatly appreciated!
+
+**Happy Coding! 🚀**
 
 </div>
