@@ -6,9 +6,23 @@ export const destinations = [
     city: "Kyoto",
     country: "Japan",
     image: "https://picsum.photos/seed/kyoto-travelnest/640/480",
+    heroImage: "https://picsum.photos/seed/kyoto-hero/1600/700",
     priceFrom: 620,
     rating: 4.8,
     tag: "Trending",
+    description:
+      "Kyoto pairs centuries-old temples and quiet bamboo groves with a food scene that rewards wandering. Expect a slower pace than Tokyo, seasonal gardens, and some of the best rail connections in the country.",
+    gallery: [
+      "https://picsum.photos/seed/kyoto-g1/500/380",
+      "https://picsum.photos/seed/kyoto-g2/500/380",
+      "https://picsum.photos/seed/kyoto-g3/500/380",
+      "https://picsum.photos/seed/kyoto-g4/500/380",
+    ],
+    thingsToDo: [
+      { title: "Fushimi Inari Shrine", description: "Walk the thousand vermilion torii gates at sunrise before the crowds arrive." },
+      { title: "Arashiyama Bamboo Grove", description: "A short, quiet path through towering bamboo — best paired with a river-side lunch." },
+      { title: "Nishiki Market", description: "Kyoto's kitchen — narrow lanes of street food, pickles, and knife shops." },
+    ],
   },
   {
     id: "dest-santorini",
@@ -16,9 +30,23 @@ export const destinations = [
     city: "Santorini",
     country: "Greece",
     image: "https://picsum.photos/seed/santorini-travelnest/640/480",
+    heroImage: "https://picsum.photos/seed/santorini-hero/1600/700",
     priceFrom: 540,
     rating: 4.9,
     tag: "Popular",
+    description:
+      "Whitewashed villages sit along volcanic cliffs above the Aegean, with caldera views that define the island's reputation. Come for the sunsets in Oia, stay for the quieter black-sand beaches on the south coast.",
+    gallery: [
+      "https://picsum.photos/seed/santorini-g1/500/380",
+      "https://picsum.photos/seed/santorini-g2/500/380",
+      "https://picsum.photos/seed/santorini-g3/500/380",
+      "https://picsum.photos/seed/santorini-g4/500/380",
+    ],
+    thingsToDo: [
+      { title: "Oia sunset walk", description: "The caldera-side path fills up fast — arrive an hour early to get a spot." },
+      { title: "Wine tasting in Pyrgos", description: "Volcanic-soil vineyards produce a distinct, mineral Assyrtiko you won't find elsewhere." },
+      { title: "Red Beach", description: "Dramatic cliffs frame a small, striking stretch of sand near Akrotiri." },
+    ],
   },
   {
     id: "dest-cape-town",
@@ -26,8 +54,22 @@ export const destinations = [
     city: "Cape Town",
     country: "South Africa",
     image: "https://picsum.photos/seed/capetown-travelnest/640/480",
+    heroImage: "https://picsum.photos/seed/capetown-hero/1600/700",
     priceFrom: 710,
     rating: 4.7,
+    description:
+      "Table Mountain anchors a city where coastline, wine country, and penguin colonies are all under an hour apart. Plan for changeable weather and one full day just for the Cape Peninsula drive.",
+    gallery: [
+      "https://picsum.photos/seed/capetown-g1/500/380",
+      "https://picsum.photos/seed/capetown-g2/500/380",
+      "https://picsum.photos/seed/capetown-g3/500/380",
+      "https://picsum.photos/seed/capetown-g4/500/380",
+    ],
+    thingsToDo: [
+      { title: "Table Mountain cableway", description: "Book the early slot — the rotating cable car sells out and clouds roll in by afternoon." },
+      { title: "Cape Peninsula drive", description: "Chapman's Peak to Cape Point, with a penguin stop at Boulders Beach along the way." },
+      { title: "Stellenbosch wine tour", description: "45 minutes from the city, with tastings across Cape Dutch-era estates." },
+    ],
   },
   {
     id: "dest-lisbon",
@@ -35,9 +77,23 @@ export const destinations = [
     city: "Lisbon",
     country: "Portugal",
     image: "https://picsum.photos/seed/lisbon-travelnest/640/480",
+    heroImage: "https://picsum.photos/seed/lisbon-hero/1600/700",
     priceFrom: 390,
     rating: 4.6,
     tag: "Best value",
+    description:
+      "Lisbon's hills reward walkers with mirador viewpoints over terracotta rooftops and the Tagus river. Tram 28 gets the attention, but the real pace of the city is in its neighborhood cafés.",
+    gallery: [
+      "https://picsum.photos/seed/lisbon-g1/500/380",
+      "https://picsum.photos/seed/lisbon-g2/500/380",
+      "https://picsum.photos/seed/lisbon-g3/500/380",
+      "https://picsum.photos/seed/lisbon-g4/500/380",
+    ],
+    thingsToDo: [
+      { title: "Alfama by foot", description: "Get lost in the oldest district's narrow, sloped streets — that's the point." },
+      { title: "Belém Tower & pastéis de nata", description: "Pair the riverside monument with a warm custard tart from the original bakery nearby." },
+      { title: "Miradouro da Senhora do Monte", description: "Lisbon's best sunset viewpoint, with far fewer crowds than the popular ones." },
+    ],
   },
   {
     id: "dest-banff",
@@ -45,8 +101,22 @@ export const destinations = [
     city: "Banff",
     country: "Canada",
     image: "https://picsum.photos/seed/banff-travelnest/640/480",
+    heroImage: "https://picsum.photos/seed/banff-hero/1600/700",
     priceFrom: 480,
     rating: 4.8,
+    description:
+      "Turquoise glacial lakes and jagged peaks make Banff a national park you can still reach by direct flight and short drive. Summer means hiking; winter turns the whole valley into a ski base.",
+    gallery: [
+      "https://picsum.photos/seed/banff-g1/500/380",
+      "https://picsum.photos/seed/banff-g2/500/380",
+      "https://picsum.photos/seed/banff-g3/500/380",
+      "https://picsum.photos/seed/banff-g4/500/380",
+    ],
+    thingsToDo: [
+      { title: "Lake Louise", description: "Rent a canoe in the morning before the parking lot and shoreline fill up." },
+      { title: "Sulphur Mountain gondola", description: "A quick ride up for a panoramic view of the whole Bow Valley." },
+      { title: "Johnston Canyon walk", description: "A well-marked catwalk trail past waterfalls, manageable for most fitness levels." },
+    ],
   },
   {
     id: "dest-marrakech",
@@ -54,8 +124,22 @@ export const destinations = [
     city: "Marrakech",
     country: "Morocco",
     image: "https://picsum.photos/seed/marrakech-travelnest/640/480",
+    heroImage: "https://picsum.photos/seed/marrakech-hero/1600/700",
     priceFrom: 350,
     rating: 4.5,
     tag: "Trending",
+    description:
+      "Marrakech's medina is a maze of souks, riads, and courtyards that rewards getting a little lost. The Jemaa el-Fnaa square shifts character completely between afternoon and night.",
+    gallery: [
+      "https://picsum.photos/seed/marrakech-g1/500/380",
+      "https://picsum.photos/seed/marrakech-g2/500/380",
+      "https://picsum.photos/seed/marrakech-g3/500/380",
+      "https://picsum.photos/seed/marrakech-g4/500/380",
+    ],
+    thingsToDo: [
+      { title: "Jemaa el-Fnaa at night", description: "Food stalls, musicians, and storytellers take over the square after sunset." },
+      { title: "Jardin Majorelle", description: "A small, cobalt-blue garden that's a calm break from the medina's pace." },
+      { title: "Souk navigation", description: "Hire a guide for the first visit — it pays for itself in time saved getting lost." },
+    ],
   },
 ];

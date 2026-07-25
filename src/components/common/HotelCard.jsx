@@ -1,10 +1,13 @@
 import { HiOutlineHeart } from "react-icons/hi";
 import Badge from "../common/Badge";
 import Rating from "../common/Rating";
+import Button from "../common/Button";
 import { formatCurrency } from "../../utils/formatters";
+import { ROUTES } from "../../constants/routes";
 
 export default function HotelCard({ hotel }) {
-  const { name, location, image, rating, reviews, pricePerNight, tags } = hotel;
+  const { id, name, location, image, rating, reviews, pricePerNight, tags } =
+    hotel;
 
   return (
     <article className="group overflow-hidden rounded-card border border-hairline bg-white shadow-soft transition-shadow hover:shadow-lift">
@@ -51,6 +54,10 @@ export default function HotelCard({ hotel }) {
           </span>{" "}
           / night
         </p>
+
+        <Button to={ROUTES.booking("hotel", id)} size="sm" className="mt-4 w-full">
+          View hotel
+        </Button>
       </div>
     </article>
   );
