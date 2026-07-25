@@ -4,6 +4,8 @@ import {
   HiOutlineUserGroup,
 } from "react-icons/hi";
 import Button from "../../common/Button";
+import AirportAutocomplete from "../../common/AirportAutocomplete";
+import { FlightFromIcon, FlightToIcon } from "../../common/FlightRouteIcons";
 import { useFlightSearchForm } from "../../../hooks/useFlightSearchForm";
 
 export default function FlightSearchCard() {
@@ -11,6 +13,7 @@ export default function FlightSearchCard() {
     register,
     handleSubmit,
     watch,
+    control,
     onSubmit,
     today,
     formState: { errors },
@@ -29,63 +32,26 @@ export default function FlightSearchCard() {
         noValidate
         className="mt-4 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_1fr_auto]"
       >
-        <div>
-          <label htmlFor="from" className="text-xs font-medium text-muted">
-            From
-          </label>
-          <div className="mt-1 flex items-center gap-2 border-b border-hairline pb-2 focus-within:border-ink">
-            <HiOutlinePaperAirplane
-              className="shrink-0 -rotate-45 text-muted"
-              aria-hidden="true"
-            />
-            <input
-              id="from"
-              type="text"
-              placeholder="City or airport"
-              className="w-full bg-transparent text-sm text-ink outline-none placeholder:text-muted/60"
-              {...register("from", { required: "Enter a departure city" })}
-              aria-invalid={!!errors.from}
-              aria-describedby={errors.from ? "from-error" : undefined}
-            />
-          </div>
-          {errors.from && (
-            <p id="from-error" className="mt-1 text-xs text-red-600">
-              {errors.from.message}
-            </p>
-          )}
-        </div>
+        <AirportAutocomplete
+          name="from"
+          control={control}
+          label="From"
+          icon={FlightFromIcon}
+          rules={{ required: "Enter a departure city" }}
+        />
 
-        <div>
-          <label htmlFor="to" className="text-xs font-medium text-muted">
-            To
-          </label>
-          <div className="mt-1 flex items-center gap-2 border-b border-hairline pb-2 focus-within:border-ink">
-            <HiOutlinePaperAirplane
-              className="shrink-0 rotate-45 text-muted"
-              aria-hidden="true"
-            />
-            <input
-              id="to"
-              type="text"
-              placeholder="City or airport"
-              className="w-full bg-transparent text-sm text-ink outline-none placeholder:text-muted/60"
-              {...register("to", {
-                required: "Enter a destination city",
-                validate: (value, formValues) =>
-                  value.trim().toLowerCase() !==
-                    formValues.from.trim().toLowerCase() ||
-                  "Destination must differ from departure",
-              })}
-              aria-invalid={!!errors.to}
-              aria-describedby={errors.to ? "to-error" : undefined}
-            />
-          </div>
-          {errors.to && (
-            <p id="to-error" className="mt-1 text-xs text-red-600">
-              {errors.to.message}
-            </p>
-          )}
-        </div>
+        <AirportAutocomplete
+          name="to"
+          control={control}
+          label="To"
+          icon={FlightToIcon}
+          rules={{
+            required: "Enter a destination city",
+            validate: (value, formValues) =>
+              value.trim().toLowerCase() !== formValues.from.trim().toLowerCase() ||
+              "Destination must differ from departure",
+          }}
+        />
 
         <div>
           <label htmlFor="departDate" className="text-xs font-medium text-muted">

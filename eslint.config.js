@@ -17,6 +17,8 @@ export default [
         crypto: "readonly",
         URLSearchParams: "readonly",
         Intl: "readonly",
+        setTimeout: "readonly",
+        clearTimeout: "readonly",
       },
       parserOptions: { ecmaFeatures: { jsx: true } },
     },

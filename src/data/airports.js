@@ -1,0 +1,20 @@
+// Local dummy data — stands in for a city/airport lookup API.
+export const airports = [
+  { id: "nyc", city: "New York", country: "United States", code: "JFK" },
+  { id: "kix", city: "Kyoto", country: "Japan", code: "KIX" },
+  { id: "jtr", city: "Santorini", country: "Greece", code: "JTR" },
+  { id: "cpt", city: "Cape Town", country: "South Africa", code: "CPT" },
+  { id: "lis", city: "Lisbon", country: "Portugal", code: "LIS" },
+  { id: "yyc", city: "Banff", country: "Canada", code: "YYC" },
+  { id: "rak", city: "Marrakech", country: "Morocco", code: "RAK" },
+  { id: "lhr", city: "London", country: "United Kingdom", code: "LHR" },
+  { id: "cdg", city: "Paris", country: "France", code: "CDG" },
+  { id: "nrt", city: "Tokyo", country: "Japan", code: "NRT" },
+  { id: "dxb", city: "Dubai", country: "United Arab Emirates", code: "DXB" },
+  { id: "sin", city: "Singapore", country: "Singapore", code: "SIN" },
+  { id: "syd", city: "Sydney", country: "Australia", code: "SYD" },
+  { id: "lax", city: "Los Angeles", country: "United States", code: "LAX" },
+  { id: "bkk", city: "Bangkok", country: "Thailand", code: "BKK" },
+  { id: "fco", city: "Rome", country: "Italy", code: "FCO" },
+  { id: "bcn", city: "Barcelona", country: "Spain", code: "BCN" },
+];

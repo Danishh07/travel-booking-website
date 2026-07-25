@@ -20,6 +20,7 @@ export default function Flights() {
   const {
     results,
     resultCount,
+    notice,
     filters,
     updateFilters,
     resetFilters,
@@ -60,6 +61,12 @@ export default function Flights() {
             sortBy={sortBy}
             onSortChange={setSortBy}
           />
+
+          {notice && (
+            <p className="mt-3 rounded-lg bg-ochre/10 px-4 py-2.5 text-sm text-ochre-darker">
+              {notice}
+            </p>
+          )}
 
           <div className="mt-5 flex flex-col gap-4">
             {results.length > 0 ? (

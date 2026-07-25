@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { HiOutlineMapPin, HiOutlineCalendar, HiOutlineUserGroup } from "react-icons/hi2";
 import Button from "../../common/Button";
+import AirportAutocomplete from "../../common/AirportAutocomplete";
 
 const today = new Date().toISOString().split("T")[0];
 
@@ -13,6 +14,7 @@ export default function HotelsSearchBar() {
     register,
     handleSubmit,
     watch,
+    control,
     formState: { errors },
   } = useForm({
     defaultValues: {
@@ -41,25 +43,14 @@ export default function HotelsSearchBar() {
       noValidate
       className="grid grid-cols-1 gap-4 rounded-card border border-hairline bg-white p-5 shadow-soft sm:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr_0.8fr_auto]"
     >
-      <div>
-        <label htmlFor="hotel-location" className="text-xs font-medium text-muted">
-          Destination
-        </label>
-        <div className="mt-1 flex items-center gap-2 border-b border-hairline pb-2 focus-within:border-ink">
-          <HiOutlineMapPin className="shrink-0 text-muted" aria-hidden="true" />
-          <input
-            id="hotel-location"
-            type="text"
-            placeholder="City or hotel name"
-            className="w-full bg-transparent text-sm outline-none"
-            {...register("location", { required: "Enter a destination" })}
-            aria-invalid={!!errors.location}
-          />
-        </div>
-        {errors.location && (
-          <p className="mt-1 text-xs text-red-600">{errors.location.message}</p>
-        )}
-      </div>
+      <AirportAutocomplete
+        name="location"
+        control={control}
+        label="Destination"
+        icon={HiOutlineMapPin}
+        placeholder="City"
+        rules={{ required: "Enter a destination" }}
+      />
 
       <div>
         <label htmlFor="check-in" className="text-xs font-medium text-muted">
