@@ -1,13 +1,16 @@
-import { HiOutlineHeart } from "react-icons/hi";
+import { HiHeart, HiOutlineHeart } from "react-icons/hi2";
 import Badge from "../common/Badge";
 import Rating from "../common/Rating";
 import Button from "../common/Button";
 import { formatCurrency } from "../../utils/formatters";
 import { ROUTES } from "../../constants/routes";
+import { useWishlist } from "../../hooks/useWishlist";
 
 export default function HotelCard({ hotel }) {
   const { id, name, location, image, rating, reviews, pricePerNight, tags } =
     hotel;
+  const { isWishlisted, toggle } = useWishlist();
+  const saved = isWishlisted("hotel", id);
 
   return (
     <article className="group overflow-hidden rounded-card border border-hairline bg-white shadow-soft transition-shadow hover:shadow-lift">
@@ -20,10 +23,14 @@ export default function HotelCard({ hotel }) {
         />
         <button
           type="button"
-          aria-label={`Save ${name} to wishlist`}
-          className="absolute right-3 top-3 rounded-full bg-white/90 p-2 text-ink transition-colors hover:text-ochre"
+          aria-label={saved ? `Remove ${name} from wishlist` : `Save ${name} to wishlist`}
+          aria-pressed={saved}
+          className={`absolute right-3 top-3 rounded-full bg-white/90 p-2 transition-colors ${
+            saved ? "text-ochre" : "text-ink hover:text-ochre"
+          }`}
+          onClick={() => toggle("hotel", id)}
         >
-          <HiOutlineHeart size={18} />
+          {saved ? <HiHeart size={18} /> : <HiOutlineHeart size={18} />}
         </button>
       </div>
 

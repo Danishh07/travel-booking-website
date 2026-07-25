@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
-import { HiOutlineHeart } from "react-icons/hi";
+import { HiHeart, HiOutlineHeart } from "react-icons/hi2";
 import Badge from "../common/Badge";
 import Rating from "../common/Rating";
 import { formatCurrency } from "../../utils/formatters";
 import { ROUTES } from "../../constants/routes";
+import { useWishlist } from "../../hooks/useWishlist";
 
 export default function DestinationCard({ destination }) {
-  const { city, country, image, priceFrom, rating, tag, slug } = destination;
+  const { id, city, country, image, priceFrom, rating, tag, slug } = destination;
+  const { isWishlisted, toggle } = useWishlist();
+  const saved = isWishlisted("destination", id);
 
   return (
     <Link
@@ -27,11 +30,17 @@ export default function DestinationCard({ destination }) {
         )}
         <button
           type="button"
-          aria-label={`Save ${city} to wishlist`}
-          className="absolute right-3 top-3 rounded-full bg-white/90 p-2 text-ink transition-colors hover:text-ochre"
-          onClick={(e) => e.preventDefault()}
+          aria-label={saved ? `Remove ${city} from wishlist` : `Save ${city} to wishlist`}
+          aria-pressed={saved}
+          className={`absolute right-3 top-3 rounded-full bg-white/90 p-2 transition-colors ${
+            saved ? "text-ochre" : "text-ink hover:text-ochre"
+          }`}
+          onClick={(e) => {
+            e.preventDefault();
+            toggle("destination", id);
+          }}
         >
-          <HiOutlineHeart size={18} />
+          {saved ? <HiHeart size={18} /> : <HiOutlineHeart size={18} />}
         </button>
       </div>
 
