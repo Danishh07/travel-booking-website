@@ -49,6 +49,7 @@ export default function Hotels() {
         />
 
         <div>
+          <h2 className="sr-only">Hotel results</h2>
           <SortBar
             resultCount={resultCount}
             sortBy={sortBy}

@@ -30,10 +30,10 @@ export default function AccountOverview({ totalBookings, totalSpent, savedCount 
         </div>
       </div>
 
-      <div className="mt-6 grid grid-cols-3 gap-4 border-t border-hairline pt-6">
+      <div className="mt-6 grid grid-cols-3 gap-2 border-t border-hairline pt-6 sm:gap-4">
         {stats.map((stat) => (
           <div key={stat.label} className="text-center">
-            <p className="font-mono text-xl font-semibold">{stat.value}</p>
+            <p className="font-mono text-lg font-semibold sm:text-xl">{stat.value}</p>
             <p className="mt-1 text-xs text-muted">{stat.label}</p>
           </div>
         ))}

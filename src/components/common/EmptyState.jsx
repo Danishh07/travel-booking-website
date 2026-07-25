@@ -3,6 +3,7 @@ export default function EmptyState({
   title,
   description,
   action,
+  headingLevel: Heading = "h3",
 }) {
   return (
     <div className="flex flex-col items-center rounded-card border border-dashed border-hairline bg-white px-6 py-16 text-center">
@@ -11,7 +12,7 @@ export default function EmptyState({
           <Icon size={24} aria-hidden="true" />
         </span>
       )}
-      <h3 className="mt-4 font-display text-lg font-semibold">{title}</h3>
+      <Heading className="mt-4 font-display text-lg font-semibold">{title}</Heading>
       {description && (
         <p className="mt-2 max-w-sm text-sm text-muted">{description}</p>
       )}

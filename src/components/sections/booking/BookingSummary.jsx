@@ -35,7 +35,7 @@ export default function BookingSummary({ title, details, priceLines, total, isSu
       <button
         type="submit"
         disabled={isSubmitting}
-        className="mt-5 w-full rounded-full bg-ochre px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-ochre-dark disabled:cursor-not-allowed disabled:opacity-60"
+        className="mt-5 w-full rounded-full bg-ochre-dark px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-ochre-darker disabled:cursor-not-allowed disabled:opacity-60"
       >
         {isSubmitting ? "Confirming…" : "Confirm booking"}
       </button>

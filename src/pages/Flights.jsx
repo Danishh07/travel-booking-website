@@ -54,6 +54,7 @@ export default function Flights() {
         />
 
         <div>
+          <h2 className="sr-only">Flight results</h2>
           <SortBar
             resultCount={resultCount}
             sortBy={sortBy}

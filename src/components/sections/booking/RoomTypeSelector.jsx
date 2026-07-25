@@ -55,29 +55,34 @@ export default function RoomTypeSelector({ pricePerNight }) {
         </div>
       </div>
 
-      <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
-        {ROOM_TYPES.map((option) => (
-          <label
-            key={option.value}
-            className={`cursor-pointer rounded-card border p-4 transition-colors ${
-              selected === option.value
-                ? "border-ochre bg-ochre/5"
-                : "border-hairline hover:border-ink/30"
-            }`}
-          >
-            <input
-              type="radio"
-              value={option.value}
-              className="sr-only"
-              {...register("roomType", { required: true })}
-            />
-            <p className="text-sm font-semibold">{option.label}</p>
-            <p className="mt-1 font-mono text-sm text-muted">
-              {formatCurrency(pricePerNight * option.multiplier)} / night
-            </p>
-          </label>
-        ))}
-      </div>
+      <fieldset className="mt-6">
+        <legend className="text-xs font-semibold uppercase tracking-wide text-muted">
+          Room type
+        </legend>
+        <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-3">
+          {ROOM_TYPES.map((option) => (
+            <label
+              key={option.value}
+              className={`cursor-pointer rounded-card border p-4 transition-colors has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-harbor has-[:focus-visible]:ring-offset-2 ${
+                selected === option.value
+                  ? "border-ochre bg-ochre/5"
+                  : "border-hairline hover:border-ink/30"
+              }`}
+            >
+              <input
+                type="radio"
+                value={option.value}
+                className="sr-only"
+                {...register("roomType", { required: true })}
+              />
+              <p className="text-sm font-semibold">{option.label}</p>
+              <p className="mt-1 font-mono text-sm text-muted">
+                {formatCurrency(pricePerNight * option.multiplier)} / night
+              </p>
+            </label>
+          ))}
+        </div>
+      </fieldset>
     </section>
   );
 }

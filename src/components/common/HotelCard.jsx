@@ -25,7 +25,7 @@ export default function HotelCard({ hotel }) {
           type="button"
           aria-label={saved ? `Remove ${name} from wishlist` : `Save ${name} to wishlist`}
           aria-pressed={saved}
-          className={`absolute right-3 top-3 rounded-full bg-white/90 p-2 transition-colors ${
+          className={`absolute right-3 top-3 rounded-full bg-white/90 p-2.5 transition-colors ${
             saved ? "text-ochre" : "text-ink hover:text-ochre"
           }`}
           onClick={() => toggle("hotel", id)}

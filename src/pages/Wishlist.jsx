@@ -35,6 +35,7 @@ export default function Wishlist() {
           <EmptyState
             icon={HiOutlineHeart}
             title="Nothing saved yet"
+            headingLevel="h2"
             description="Browse destinations and hotels, and tap the heart icon to save your favorites for later."
             action={
               <div className="flex gap-3">

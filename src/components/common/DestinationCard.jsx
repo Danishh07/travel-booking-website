@@ -6,16 +6,20 @@ import { formatCurrency } from "../../utils/formatters";
 import { ROUTES } from "../../constants/routes";
 import { useWishlist } from "../../hooks/useWishlist";
 
+/**
+ * Card is an <article>, not an <a> — the whole surface is still clickable
+ * via a "stretched link" (the <Link> around the title gets an absolutely
+ * positioned ::after covering the card). This avoids nesting a <button>
+ * inside an <a>, which is invalid HTML and creates a confusing single tab
+ * stop with hidden interactive content for keyboard/screen-reader users.
+ */
 export default function DestinationCard({ destination }) {
   const { id, city, country, image, priceFrom, rating, tag, slug } = destination;
   const { isWishlisted, toggle } = useWishlist();
   const saved = isWishlisted("destination", id);
 
   return (
-    <Link
-      to={ROUTES.destination(slug)}
-      className="group block overflow-hidden rounded-card border border-hairline bg-white shadow-soft transition-shadow hover:shadow-lift"
-    >
+    <article className="group relative overflow-hidden rounded-card border border-hairline bg-white shadow-soft transition-shadow hover:shadow-lift">
       <div className="relative aspect-[4/3] overflow-hidden">
         <img
           src={image}
@@ -32,13 +36,10 @@ export default function DestinationCard({ destination }) {
           type="button"
           aria-label={saved ? `Remove ${city} from wishlist` : `Save ${city} to wishlist`}
           aria-pressed={saved}
-          className={`absolute right-3 top-3 rounded-full bg-white/90 p-2 transition-colors ${
+          className={`absolute z-10 right-3 top-3 rounded-full bg-white/90 p-2.5 transition-colors ${
             saved ? "text-ochre" : "text-ink hover:text-ochre"
           }`}
-          onClick={(e) => {
-            e.preventDefault();
-            toggle("destination", id);
-          }}
+          onClick={() => toggle("destination", id)}
         >
           {saved ? <HiHeart size={18} /> : <HiOutlineHeart size={18} />}
         </button>
@@ -47,7 +48,14 @@ export default function DestinationCard({ destination }) {
       <div className="p-4">
         <div className="flex items-start justify-between gap-2">
           <div>
-            <h3 className="font-display text-lg font-semibold">{city}</h3>
+            <h3 className="font-display text-lg font-semibold">
+              <Link
+                to={ROUTES.destination(slug)}
+                className="static after:absolute after:inset-0"
+              >
+                {city}
+              </Link>
+            </h3>
             <p className="text-sm text-muted">{country}</p>
           </div>
           <Rating value={rating} />
@@ -59,6 +67,6 @@ export default function DestinationCard({ destination }) {
           </span>
         </p>
       </div>
-    </Link>
+    </article>
   );
 }

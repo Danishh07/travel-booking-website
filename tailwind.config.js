@@ -12,8 +12,9 @@ export default {
           light: "#2C4270",
         },
         ochre: {
-          DEFAULT: "#C08B3E", // primary CTA accent
-          dark: "#A5722E",
+          DEFAULT: "#C08B3E", // decorative use only: icons, badge text, borders, slider — NOT button text on this bg (3.0:1, fails AA text contrast)
+          dark: "#8B5E27", // accessible CTA background — 5.6:1 with white text
+          darker: "#6E4A1F", // hover/active state — 7.9:1 with white text
           light: "#E4C593",
         },
         harbor: {
