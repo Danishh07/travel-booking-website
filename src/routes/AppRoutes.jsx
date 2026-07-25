@@ -12,6 +12,9 @@ const DestinationDetails = lazy(() => import("../pages/DestinationDetails"));
 const Booking = lazy(() => import("../pages/Booking"));
 const Wishlist = lazy(() => import("../pages/Wishlist"));
 const Dashboard = lazy(() => import("../pages/Dashboard"));
+const About = lazy(() => import("../pages/About"));
+const Careers = lazy(() => import("../pages/Careers"));
+const Press = lazy(() => import("../pages/Press"));
 const NotFound = lazy(() => import("../pages/NotFound"));
 
 export default function AppRoutes() {
@@ -26,6 +29,9 @@ export default function AppRoutes() {
           <Route path={ROUTES.BOOKING} element={<Booking />} />
           <Route path={ROUTES.WISHLIST} element={<Wishlist />} />
           <Route path={ROUTES.DASHBOARD} element={<Dashboard />} />
+          <Route path={ROUTES.ABOUT} element={<About />} />
+          <Route path={ROUTES.CAREERS} element={<Careers />} />
+          <Route path={ROUTES.PRESS} element={<Press />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

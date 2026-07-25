@@ -8,4 +8,7 @@ export const ROUTES = {
   booking: (type, id) => `/booking/${type}/${id}`,
   WISHLIST: "/wishlist",
   DASHBOARD: "/dashboard",
+  ABOUT: "/about",
+  CAREERS: "/careers",
+  PRESS: "/press",
 };

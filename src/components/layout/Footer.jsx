@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import { NAV_LINKS } from "../../constants/navigation";
+import { ROUTES } from "../../constants/routes";
 
 const FOOTER_COLUMNS = [
   {
@@ -8,9 +10,9 @@ const FOOTER_COLUMNS = [
   {
     heading: "Company",
     links: [
-      { label: "About", to: "/about" },
-      { label: "Careers", to: "/careers" },
-      { label: "Press", to: "/press" },
+      { label: "About", to: ROUTES.ABOUT },
+      { label: "Careers", to: ROUTES.CAREERS },
+      { label: "Press", to: ROUTES.PRESS },
     ],
   },
   {
@@ -46,12 +48,12 @@ export default function Footer() {
               <ul className="mt-4 space-y-3">
                 {column.links.map((link) => (
                   <li key={link.label}>
-                    <a
-                      href={link.to}
+                    <Link
+                      to={link.to}
                       className="text-sm text-white/70 transition-colors hover:text-white"
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
