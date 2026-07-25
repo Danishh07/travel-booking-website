@@ -57,7 +57,7 @@ This project was created to strengthen practical frontend development skills and
 
 | | |
 |---|---|
-| 🌐 **Live Website** | [your-deployment-url.vercel.app](https://your-deployment-url.vercel.app) *(placeholder)* |
+| 🌐 **Live Website** | [travelnest-demo.vercel.app](https://travelnest-demo.vercel.app/)  |
 | 💻 **GitHub Repository** | [github.com/Danishh07/travel-booking-website](https://github.com/Danishh07/travel-booking-website) | 
 
 ---
@@ -79,12 +79,8 @@ This project was created to strengthen practical frontend development skills and
 
 | Page | Preview |
 |---|---|
-| Flights (search, filters, sorting) | `![Flights Page](./docs/screenshots/flights.png)` |
-| Hotels (search, filters, sorting) | `![Hotels Page](./docs/screenshots/hotels.png)` |
-| Booking Flow (passenger details + summary) | `![Booking Page](./docs/screenshots/booking.png)` |
-| Dashboard (trips, wishlist, account) | `![Dashboard](./docs/screenshots/dashboard.png)` |
-
-*Replace the paths above with real screenshots in `docs/screenshots/` once available.*
+| Flights (search, filters, sorting) | ![Flights Page](./docs/screenshots/flights.png) |
+| Hotels (search, filters, sorting) | ![Hotels Page](./docs/screenshots/hotels.png) |
 
 </details>
 
