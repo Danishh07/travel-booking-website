@@ -1,10 +1,21 @@
+import Hero from "../components/sections/home/Hero";
+import PopularDestinations from "../components/sections/home/PopularDestinations";
+import TrendingHotels from "../components/sections/home/TrendingHotels";
+import TravelCategories from "../components/sections/home/TravelCategories";
+import WhyChooseUs from "../components/sections/home/WhyChooseUs";
+import Testimonials from "../components/sections/home/Testimonials";
+import Newsletter from "../components/sections/home/Newsletter";
+
 export default function Home() {
   return (
-    <div className="mx-auto max-w-7xl px-6 py-16">
-      <h1 className="font-display text-3xl font-semibold">Home</h1>
-      <p className="mt-2 text-muted">
-        This page is scaffolded and will be built out as its own feature.
-      </p>
-    </div>
+    <>
+      <Hero />
+      <TravelCategories />
+      <PopularDestinations />
+      <TrendingHotels />
+      <WhyChooseUs />
+      <Testimonials />
+      <Newsletter />
+    </>
   );
 }

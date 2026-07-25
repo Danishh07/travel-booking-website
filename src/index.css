@@ -53,6 +53,12 @@
   .ticket-divider::after {
     right: -24px;
   }
+
+  /* Variant for tickets on a white card body instead of the canvas bg */
+  .ticket-divider--on-white::before,
+  .ticket-divider--on-white::after {
+    background: theme("colors.white");
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
