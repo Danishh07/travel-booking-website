@@ -1,7 +1,5 @@
 <div align="center">
 
-<div align="center">
-
 # ✈️ TravelNest
 
 ### A modern frontend travel booking platform built with React.
@@ -145,51 +143,39 @@ This project was created to strengthen practical frontend development skills and
 
 ## 📁 Folder Structure
 
-```
+```text
 travelnest/
 ├── public/
 ├── src/
-│   ├── assets/                 # static images/icons
+│   ├── assets/                 # Images, icons, and static assets
 │   ├── components/
-│   │   ├── common/             # generic, reusable UI
-│   │   │   ├── Button.jsx
-│   │   │   ├── Badge.jsx
-│   │   │   ├── Rating.jsx
-│   │   │   ├── Breadcrumb.jsx
-│   │   │   ├── Accordion.jsx
-│   │   │   ├── Pagination.jsx
-│   │   │   ├── EmptyState.jsx
-│   │   │   ├── DestinationCard.jsx
-│   │   │   ├── HotelCard.jsx
-│   │   │   ├── FlightCard.jsx
-│   │   │   └── ...
-│   │   ├── layout/              # Navbar, Footer, Layout (Outlet wrapper)
-│   │   └── sections/            # page-specific composed sections
-│   │       ├── home/             # Hero, FlightSearchCard, Testimonials...
-│   │       ├── flights/          # FiltersSidebar, SortBar, FlightsSearchBar
-│   │       ├── hotels/           # FiltersSidebar, SortBar, HotelsSearchBar
-│   │       ├── destination/      # Gallery, ThingsToDo, NearbyHotels, Reviews
-│   │       ├── booking/          # PassengerDetailsForm, SeatClassSelector...
-│   │       ├── dashboard/        # AccountOverview, TripCard
-│   │       └── help/             # BookingLookup
-│   ├── pages/                   # one file per route (14 pages)
-│   ├── routes/                  # AppRoutes.jsx — lazy-loaded route definitions
+│   │   ├── common/             # Reusable UI components
+│   │   ├── layout/             # Navbar, Footer, Layout
+│   │   └── sections/           # Page-specific sections
+│   │       ├── home/
+│   │       ├── flights/
+│   │       ├── hotels/
+│   │       ├── destination/
+│   │       ├── booking/
+│   │       ├── dashboard/
+│   │       └── help/
+│   ├── pages/                  # Route-level pages
+│   ├── routes/                 # Application routing
 │   ├── redux/
-│   │   ├── store.js              # store setup + localStorage persistence
-│   │   └── slices/               # bookingSlice, wishlistSlice, uiSlice
-│   ├── hooks/                   # useFlightsFilter, useHotelsFilter, useWishlist,
-│   │                             # useBookings, useFlightSearchForm
-│   ├── services/                # scaffolded for a future real API layer
-│   ├── utils/                   # formatters, pricing, storage helpers
-│   ├── constants/                # routes, nav links, booking config
-│   ├── data/                    # local mock data (flights, hotels, destinations,
-│   │                             # reviews, FAQs, jobs, press mentions...)
+│   │   ├── store.js
+│   │   └── slices/
+│   ├── hooks/                  # Custom React hooks
+│   ├── services/               # API layer (future integration)
+│   ├── utils/                  # Utility functions
+│   ├── constants/              # Application constants
+│   ├── data/                   # Local mock data
 │   ├── App.jsx
 │   ├── main.jsx
-│   └── index.css                # Tailwind layers + design tokens
-├── tailwind.config.js            # color/type/shadow design tokens
+│   └── index.css
+├── tailwind.config.js
 ├── eslint.config.js
-└── package.json
+├── package.json
+└── README.md
 ```
 
 ---
